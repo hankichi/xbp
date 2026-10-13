@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git & HTML 学習ドキュメント</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        h1 { margin: 0; font-size: 1.8em; }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 8px;
+            margin-top: 40px;
+        }
+        h3 {
+            color: #3498db;
+            margin-top: 25px;
+        }
+        p { margin-bottom: 15px; }
+        ul, ol {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+        li { margin-bottom: 8px; }
+        code {
+            background-color: #eef1f6;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: Consolas, monospace;
+            color: #c7254e;
+        }
+        .note {
+            background-color: #e8f4f8;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .img-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .img-container img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .caption {
+            font-size: 0.85em;
+            color: #666;
+            margin-top: 5px;
+        }
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #777;
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Git & HTML</h1>
+    </header>
+
+    <main>
+        <!-- 1. Gitについてのセクション -->
+        <section id="git">
+            <h2>1. Gitについて</h2>
+            <p><strong>Git（ギット）</strong>は、ファイルの変更履歴を記録・追跡するための分散型バージョン管理システムのこと。</p>
+
+            <h3>なぜGitが必要なのか？</h3>
+            <ul>
+                <li>過去の状態にいつでも戻せる（簡単に修正前に戻すことができる）。</li>
+                <li>「いつ・だれが・何を・なぜ変更したか」の記録が残る。</li>
+                <li>複数人で同じファイルを同時に編集しても管理しやすい。</li>
+            </ul>
+
+            <h3>よく使うGitコマンド</h3>
+            <ul>
+                <li><code>git init</code>：リポジトリ（保存庫）を新規作成する</li>
+                <li><code>git add .</code>：変更したファイルをステージングエリア（提出準備）に追加する</li>
+                <li><code>git commit -m "メッセージ"</code>：変更内容を記録（セーブ）する</li>
+                <li><code>git push origin main</code>：ローカルの変更をGitHubなどのリモートリポジトリへアップロードする</li>
+            </ul>
+
+            <div class="note">
+                <strong>疑問に思って調べたこと：GitとGitHubの違い</strong><br>
+                Gitは「ローカルのパソコン上で履歴を管理するツール（仕組み）」で、GitHubは「その履歴をインターネット上で共有・保存するためのWebサービス」である。
+            </div>
+
+            <p>参考リンク：<a href="https://git-scm.com/doc" target="_blank" rel="noopener">Git 公式ドキュメント</a></p>
+        </section>
+
+        <!-- 2. HTMLについてのセクション -->
+        <section id="html">
+            <h2>2. HTMLについて</h2>
+            <p><strong>HTML（HyperText Markup Language）</strong>は、Webページを制作するための言語のこと。</p>
+
+            <h3>HTMLの基本構造</h3>
+            <p>HTMLは「タグ」と呼ばれる記号（<code>&lt;tag&gt;...&lt;/tag&gt;</code>）を使って、文章の見出しや段落、画像、リンクなどの要素を指定します。</p>
+
+            <h3>代表的なタグ一覧</h3>
+            <ul>
+                <li><code>&lt;h1&gt;</code> 〜 <code>&lt;h6&gt;</code>：見出しを設定する</li>
+                <li><code>&lt;p&gt;</code>：段落（文章のかたまり）を作る</li>
+                <li><code>&lt;a href="URL"&gt;</code>：他のページへのリンクを貼る</li>
+                <li><code>&lt;img src="画像パス" alt="説明"&gt;</code>：画像を表示する</li>
+            </ul>
+
+            <div class="note">
+                <strong>自分で調べて分かった点：セマンティックタグ（意味のあるタグ）の重要性</strong><br>
+                単に <code>&lt;div&gt;</code> で囲むだけでなく、<code>&lt;header&gt;</code> や <code>&lt;main&gt;</code>、<code>&lt;footer&gt;</code> を使うことで、検索エンジンや画面読み上げソフトに正しく構造が伝わる。
+            </div>
+
+            <p>参考リンク：<a href="https://developer.mozilla.org/ja/docs/Web/HTML" target="_blank" rel="noopener">MDN Web Docs - HTMLの基礎</a></p>
+        </section>
+    </main>
+
+</body>
+</html>
